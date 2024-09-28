@@ -31,6 +31,24 @@ and remember:
 - [Some built-in procedures](https://www.cs.cmu.edu/Groups/AI/html/r4rs/r4rs_8.html)
 - [Install DrRacket](https://download.racket-lang.org/)
 
+## Sessions with Simo
+
+1. (Simo to confirm) 03.10, Thursday, 8 am, ??? or 02.10, Wednesday, 5/6 pm.
+2. 08.10, Tuesday, 6 pm, 314
+3. 15.10, Tuesday, 6 pm, 314
+4. 22.10, Tuesday, 6 pm, 314
+5. 29.10, Tuesday, 6 pm, 314
+6. 05.11, Tuesday, 6 pm, 314
+7. 12.11, Tuesday, 6 pm, 314
+8. 19.11, Tuesday, 6 pm, 314
+9. 26.11, Tuesday, 6 pm, 314
+10. 03.12, Tuesday, 6 pm, 314
+11. 10.12, Tuesday, 6 pm, 314
+12. (Simo to confirm) 16.12, Monday, 11 am, ??? or 17.12, Tuesday, 12/1 pm.
+13. 17.12, Tuesday, 6 pm, 314
+14. 07.01, Tuesday, 6 pm, 314
+15. 14.01, Tuesday, 6 pm, 314
+
 ## Frequently Asked Questions
 
 ### 1. I'm not in the Moodle class. What do I do?
