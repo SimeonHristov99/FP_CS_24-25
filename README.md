@@ -33,7 +33,7 @@ and remember:
 
 ## Sessions with Simo
 
-1. (Simo to confirm) 03.10, Thursday, 8 am, ??? or 02.10, Wednesday, 5/6 pm.
+1. 03.10, Thursday, 8 am, 107
 2. 08.10, Tuesday, 6 pm, 314
 3. 15.10, Tuesday, 6 pm, 314
 4. 22.10, Tuesday, 6 pm, 314
