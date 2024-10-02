@@ -144,14 +144,11 @@ No. However, note that I have a very strict standard (code is easy to read, safe
 1. Learn by doing, rather than listening.
 2. Do you use code generators.
 3. Go through `notes.txt` for the current week (some weeks may not have new information).
-4. (optional) Resolve 
-
-5. Преминете през notes.txt за текущата седмица (за някои седмици няма да има нова информация).
-6. (по желание) Опитайте се да пререшите задачите, които решихме по време на часа, като сравнявате с написаните решения.
-7. Ако имате въпроси в 1. (и/или 2.), питайте смело по имейл.
-8. Опитайте се да решите всички задачи от раздела "For Home".
-9. Ако не можете да решите задача, пропуснете я и опитайте с другите.
-10. Когато приключите изпратете своите опити и решения в кореспонденцията, която ще стартирахте с изпращането на потвърждаващия имейл. До 24 часа с Михи ще ви върнем обратна връзка за следващите стъпки.
+4. (optional) Resolve the tasks we solved in class.
+5. If you have questions on points `3.` and/or `4.` ask without doubt!
+6. Try to solve as much tasks as you can from the `For Home` section.
+7. If you can't solve a task, skip it - continue with the rest.
+8. After you've solved as much as you could, submit an email, highlighting what you tried and what your idea was.
 
 ### 14. Can I use external help - for example, repos/solutions from other current/previous students?
 
