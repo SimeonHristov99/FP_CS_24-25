@@ -19,9 +19,9 @@ Write the "Hello, world" procedure.
 
 **Description:**
 
-Define procedures that return:
+Define the following procedures:
 
-- `min-if`, `min-guard`, `min-built-in`: return the smaller of two whole numbers;
+- `min-if`, `min-guard`, `min-built-in`: return the smaller of two numbers;
 - `last-digit`: returns the last digit of a number;
 - `quotient-whole`: returns the quotient of the division of two numbers;
 - `div-whole`: returns the quotient and remainder of the division of two numbers;
