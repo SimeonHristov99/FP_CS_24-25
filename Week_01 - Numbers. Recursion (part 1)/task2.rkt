@@ -5,8 +5,10 @@ Define the following procedures:
 
 - `min-if`, `min-guard`, `min-built-in`: return the smaller of two numbers;
 - `last-digit`: returns the last digit of a number;
-- `quotient-whole`: returns the quotient of the division of two numbers;
-- `div-whole`: returns the quotient and remainder of the division of two numbers;
+- `quotient-whole`: returns the
+       quotient of the division of two numbers;
+- `div-whole`: returns the
+       quotient and remainder of the division of two numbers;
 - `remove-last-digit`: returns a whole number without its last digit;
 - `avg-whole`: returns the average of two whole numbers;
 - `round-two-dig`: return the number rounded to the second digit after the decimal point.
@@ -20,39 +22,42 @@ Define the following procedures:
 |#
 
 (define (min-if x y)
-  
+  (if (< x y) x y)
   )
 
 (define (min-guard x y)
-  
+  (cond
+    [(negative? (- x y)) x]
+    [else y]
+    )
   )
 
 (define (min-built-in x y)
-  
+  (min x y)
   )
 
 (define (last-digit n)
-  
+  (remainder n 10)
   )
 
 (define (quotient-whole x y)
-  
+  (quotient x y)
   )
 
 (define (div-whole x y)
-  
+  (/ x y)
   )
 
 (define (remove-last-digit n)
-  
+  (quotient n 10)
   )
 
 (define (average-whole x y)
-  
+  (/ (+ x y) 2)
   )
 
 (define (round-two-dig n)
-  
+  (/ (round (* n 100)) 100)
   )
 
 (= (min-if -60 -15) -60)

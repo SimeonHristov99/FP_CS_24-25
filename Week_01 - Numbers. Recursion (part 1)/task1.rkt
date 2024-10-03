@@ -8,4 +8,4 @@ Write the "Hello, world" procedure.
 1. The text "Hello, world" is printed on the console.
 |#
 
-
+(display "Hello, world")

@@ -13,19 +13,24 @@ Define the following functions:
 3. `not-equal-one-line?` is defined **without** the use of `if-else`.
 4. `not-equal-guards?` is defined using guards.
 5. `inside?` is defined on a single line.
-6. `inside?` is defined **without** the use of `if-else`.
+6. `inside?` is defined **without** the
+          use of `if-else`.
 |#
 
 (define (not-equal-one-line? x y)
-  
+  (not (= x y))
   )
 
 (define (not-equal-guards? x y)
-  
+  (cond
+    [(= x y) #f]
+    [else #t]
+    )
   )
 
 (define (inside? start finish x)
-  
+  ; (and (>= start x) (<= x finish))
+  (<= (min start finish) x (max start finish))
   )
 
 (equal? (not-equal-one-line? 5 2) #t)

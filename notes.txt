@@ -2,17 +2,17 @@
 # Week_01 - Recursion (part 1)
 ###################################################################################################
 
-[ ] If you don't have access to Moodle, write me an email as soon as possible: s.e.hristov99@gmail.com .
-[ ] Walk around the GitHub page.
-    [ ] What is that "For Home" section? (please remind Simo to explain it at the start of the second hour, in case he forgets!!)
-[ ] Yes, homework 3 is going to be during the Christmas holidays.
+[X] If you don't have access to Moodle, write me an email as soon as possible: s.e.hristov99@gmail.com .
+[X] Walk around the GitHub page.
+    [X] What is that "For Home" section? (please remind Simo to explain it at the start of the second hour, in case he forgets!!)
+[X] Yes, homework 3 is going to be during the Christmas holidays.
     Here is a timeline that might change:
         - homework 1: 19.10.2024 - 03.11.2024
         - exam 1    : 09/10.11.2024
         - homework 2: 23.11.2024 - 10.12.2024
         - homework 3: 14.12.2024 - 05.01.2025
         - exam 2    : 11/12.01.2024
-[ ] During the intermission create a chat in Facebook (FP_CS_24_25). Remind Simo if he forgets, please 😄!
+[X] During the intermission create a chat in Facebook (FP_CS_24_25). Remind Simo if he forgets, please 😄!
     Also keep in mind that if you want a fast/timely reply, you ought to send an email.
     I do not log into FB often.
 
@@ -44,11 +44,11 @@ Comments
 
 The functions in Racket are (formally) called procedures
     What is the difference between a procedure and a method?
-        ???
+        Methods have the "this" pointer.
 
 
 What is a predicate?
-    ???
+    A procedure which returns bool.
 
 
 Types of Evaluation Processes
@@ -57,17 +57,17 @@ Types of Evaluation Processes
         2. The recursive call is part of an expression.
 
    Linearly Iterative
-        1. The result is stored as a variable that is set by ANOTHER function.
-        Often the variable is named "result" and the function - "helper".
+        1. The result is stored as a parameter that is set by ANOTHER function.
+        Often the parameter is named "result" and the function - "helper".
         2. The recursive call is not part of an expression.
         These processes are faster than the linearly recursive ones!
 
 
 What is a declaration and what is a definition?
-    int add(const int x, const int y)       <-- ???
-    {                                       <-- ???
-        return x + y;                       <-- ???
-    }                                       <-- ???
+    int add(const int x, const int y)       <-- declaration
+    {                                       <-- definition
+        return x + y;                       <-- definition
+    }                                       <-- definition
 
 
 Built-in data types
@@ -129,9 +129,9 @@ Procedures
         - NOTE: They work with more than two numbers also!
         - (max 1 2 3 4 5) -> 5
         - (<= 1 2 3 4 5) -> #t
-    (if <boolean_cond>  <= Notice the line breaks!
-        <code if true>  <= Notice the line breaks!
-        <code if false> <= Notice the line breaks!
+    (if <boolean_cond>  <== Notice the line breaks!
+        <code if true>  <== Notice the line breaks!
+        <code if false> <== Notice the line breaks!
         )
 
 
