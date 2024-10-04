@@ -33,7 +33,7 @@ and remember:
 
 ## Sessions with Simo
 
-1. 03.10, Thursday, 8 am, 107
+1. :white_check_mark: **03.10, Thursday, 8 am, 107**
 2. 08.10, Tuesday, 6 pm, 314
 3. 15.10, Tuesday, 6 pm, 314
 4. 22.10, Tuesday, 6 pm, 314
@@ -44,7 +44,7 @@ and remember:
 9. 26.11, Tuesday, 6 pm, 314
 10. 03.12, Tuesday, 6 pm, 314
 11. 10.12, Tuesday, 6 pm, 314
-12. (Simo to confirm) 16.12, Monday, 11 am, ??? or 17.12, Tuesday, 12/1 pm.
+12. **(Simo to confirm) 16.12, Monday, 11 am, ??? or 17.12, Tuesday, 12/1 pm.**
 13. 17.12, Tuesday, 6 pm, 314
 14. 07.01, Tuesday, 6 pm, 314
 15. 14.01, Tuesday, 6 pm, 314
