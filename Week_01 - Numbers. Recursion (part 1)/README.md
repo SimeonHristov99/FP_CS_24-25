@@ -274,11 +274,12 @@ Define two predicates - `leap-year-one-line?` and `leap-year-guards?`, that chec
 
 1. Add one new test case. Place a comment after it with the words `my test`.
 2. All tests pass.
-3. Parameter validation is performed.
-4. `leap-year-one-line?` implements `Method I`.
-5. `leap-year-one-line?` uses boolean logical operators.
-6. `leap-year-one-line?` does not return `#t` or `#f` explicitly.
-7. `leap-year-guards?` uses guards.
+3. Parameter validation is performed only in `leap-year-guards?`.
+4. Parameter validation is not performed in `leap-year-one-line?`.
+5. `leap-year-one-line?` implements `Method I`.
+6. `leap-year-one-line?` uses boolean logical operators.
+7. `leap-year-one-line?` does not return `#t` or `#f` explicitly.
+8. `leap-year-guards?` uses guards.
 
 **Test cases:**
 
