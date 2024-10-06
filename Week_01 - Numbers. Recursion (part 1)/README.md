@@ -182,6 +182,38 @@ Watch [this](https://www.youtube.com/watch?v=HlgG395PQWw) YouTube video and answ
 
 **Description:**
 
+Define two functions - `even-if?` and `even-guards?`, that check whether a whole number is even.
+
+**Acceptance criteria:**
+
+1. Add one new test case for each of the functions. Place a comment after it with the words `my test`.
+2. All tests pass.
+3. `even-if?` uses an `if-else` statement.
+4. `even-guards?` uses guards.
+
+**Test cases:**
+
+Define two procedures that return whether a number is even:
+
+- using if-else;
+- using guards.
+
+Test cases:
+
+```scheme
+(equal? (even-if? 2) "Yes")
+(equal? (even-if? 15452) "Yes")
+(equal? (even-if? 321) "No")
+
+(equal? (even-guards? 2) "Yes")
+(equal? (even-guards? 15452) "Yes")
+(equal? (even-guards? 321) "No")
+```
+
+### ⭐ Task 3
+
+**Description:**
+
 Define two functions - `sum-cubes-pow` and `sum-cubes-no-pow`, that return the sum of the cubes of two whole numbers.
 
 **Acceptance criteria:**
@@ -201,7 +233,7 @@ Define two functions - `sum-cubes-pow` and `sum-cubes-no-pow`, that return the s
 (= (sum-cubes-no-pow 10 50) 126000)
 ```
 
-### ⭐ Task 3
+### ⭐ Task 4
 
 **Description:**
 
@@ -219,7 +251,7 @@ Define a procedure that returns the average of the sum of the squares of two who
 (= (sq-avg 10 13) 134.5)
 ```
 
-### 🌟 Task 4
+### 🌟 Task 5
 
 **Description:**
 
@@ -250,7 +282,7 @@ Define a procedure for calculating the `GCD` of two whole numbers.
 (= (my-gcd 13 1235) 13)
 ```
 
-### ⭐ Task 5
+### ⭐ Task 6
 
 **Description:**
 
@@ -303,7 +335,7 @@ Define two predicates - `leap-year-one-line?` and `leap-year-guards?`, that chec
 (equal? (leap-year-guards? 2100) #f)
 ```
 
-### ⭐ Task 6
+### ⭐ Task 7
 
 **Description:**
 
@@ -328,7 +360,7 @@ John has a backpack. With it he can carry `k` kilograms. An item from the superm
 (equal? (can-carry? 42 95.11 0.51) #t)
 ```
 
-### 🌟 Task 7
+### 🌟 Task 8
 
 **Description:**
 
@@ -382,7 +414,7 @@ After night 9 --> 810
 After day 10  --> 910
 ```
 
-### 🌟 Task 8
+### 🌟 Task 9
 
 **Description:**
 
@@ -411,7 +443,7 @@ Calculate the number of days the snail will need to reach the top of the column.
 (= (snail 5 10 3) 1)
 ```
 
-### 💫 Task 9
+### 💫 Task 10
 
 **Description:**
 
@@ -430,4 +462,48 @@ Define a function that reverses a non-negative number.
 (= (rev 1) 1)
 (= (rev 123) 321)
 (= (rev 987654321) 123456789)
+```
+
+## ⭐ Task 11
+
+**Description:**
+
+A number is a palindrome if and only if it is the same number from right to left as well as from left to right. Define a predicate that checks whether a non-negative number is a palindrome.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+2. Parameter validation is performed.
+
+**Test cases:**
+
+```scheme
+(equal? (palindrome? 1) #t)
+(equal? (palindrome? 6) #t)
+(equal? (palindrome? 1010) #f)
+(equal? (palindrome? 505) #t)
+(equal? (palindrome? 123321) #t)
+(equal? (palindrome? 654) #f)
+(equal? (palindrome? 121) #t)
+(equal? (palindrome? 12) #f)
+(equal? (palindrome? 120) #f)
+(equal? (palindrome? 12321) #t)
+(equal? (palindrome? 1221) #t)
+```
+
+## Task 12
+
+**Description:**
+
+Define a linearly recursive function for calculating the sum of the digits of a whole number. Assume correct input.
+
+**Acceptance criteria:**
+
+1. All tests pass.
+
+**Test cases:**
+
+```haskell
+(= (sum-digits-rec 123) 6)
+(= (sum-digits-rec 12345) 15)
 ```
