@@ -11,8 +11,20 @@ Define a predicate that checks whether a number is prime.
 2. Parameter validation is performed.
 |#
 
+(require math/number-theory)
+
 (define (num-prime? n)
-  42
+  (define (helper d)
+    (cond
+      [(>= d n) #t]
+      [(divides? d n) #f]
+      [else (helper (add1 d))]
+      )
+    )
+  (if (negative? n)
+      (error "n has to be non-negative")
+      (and (> n 1) (helper 2))
+      )
   )
 
 (equal? (num-prime? 1) #f)

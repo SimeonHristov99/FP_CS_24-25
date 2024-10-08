@@ -9,8 +9,20 @@ divisors of a number. For negative numbers return `0`.
 1. All tests pass.
 |#
 
+(require math/number-theory)
+
 (define (sum-divs n)
-  42
+  (define (helper result d)
+    (cond
+      [(> d n) result]
+      [(divides? d n) (helper (+ result d) (add1 d))]
+      [else (helper result (add1 d))]
+      )
+    )
+  (if (<= n 0)
+      0
+      (helper 1 2)
+      )
   )
 
 (= (sum-divs 0) 0)

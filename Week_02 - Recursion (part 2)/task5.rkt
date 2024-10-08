@@ -11,7 +11,16 @@ in an ascending order.
 |#
 
 (define (inc-digits? n)
-  42
+  (or
+   (< n 10)
+   (and
+    (>=
+     (remainder n 10)
+     (remainder (quotient n 10) 10)
+     )
+    (inc-digits? (quotient n 10))
+    )
+   )
   )
 
 (equal? (inc-digits? 1244) #t)

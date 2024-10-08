@@ -172,7 +172,7 @@ Importing libraries:
 
 Procedures:
 	(divides? d n): Whether d divides n with remainder=0.
-		(divides? 5 25) -> #t ; How would you implement it? Answer: ???
+		(divides? 5 25) -> #t ; How would you implement it? Answer: (zero? (reminder n d))
 		(divides? 5 19) -> #f
 		(divides? 10 66) -> #f
 		(divides? 10 100) -> #t

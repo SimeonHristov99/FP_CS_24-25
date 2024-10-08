@@ -13,8 +13,13 @@ Assume correct input.
 1. All tests pass.
 |#
 
+(require math/number-theory)
+
 (define (perfect? n)
-  42
+  (and
+   (positive? n)
+   (= (- (divisor-sum n) n) n)
+   )
   )
 
 (equal? (perfect? 6) #t)

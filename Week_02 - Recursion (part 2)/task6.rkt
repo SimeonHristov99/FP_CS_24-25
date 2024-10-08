@@ -27,9 +27,33 @@ and `1634` (`4` digits):
 3. Show how `racket/trace` can help.
 |#
 
-(define (narcissistic? n)
-  42
+(require racket/trace)
+
+(define (num-digits n)
+  (if (< (abs n) 10)
+      1
+      (add1 (num-digits (quotient n 10)))
+      )
   )
+
+(define (narcissistic? n)
+  (define (helper len leftover)
+    (if (zero? leftover)
+        0
+        (+
+         (expt (remainder leftover 10) len)
+         (helper len (quotient leftover 10))
+         )
+        )
+    )
+  (trace helper)
+  (= n (helper (num-digits n) n))
+  )
+
+(num-digits 0) ; 1
+(num-digits 100) ; 3
+(num-digits -1) ; 1
+(num-digits -500) ; 3
 
 (equal? (narcissistic? 7) #t)
 (equal? (narcissistic? 12) #f)
