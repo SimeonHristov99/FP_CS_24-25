@@ -34,7 +34,7 @@ and remember:
 ## Sessions with Simo
 
 1. :white_check_mark: **03.10, Thursday, 8 am, 107**
-2. 08.10, Tuesday, 6 pm, 314
+2. :white_check_mark: 08.10, Tuesday, 6 pm, 314
 3. 15.10, Tuesday, 6 pm, 314
 4. 22.10, Tuesday, 6 pm, 314
 5. 29.10, Tuesday, 6 pm, 314
