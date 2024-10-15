@@ -145,10 +145,10 @@ Use it to evaluate the following expressions:
 (= (accumulate ???) 3628800)
 
 ; 1 * 3 * 5 * ... * 10
-(= (accumulate ???) 2027025)
+(= (accumulate ???) 945)
 
 ; 1^2 + 3^2 + 5^2 + ... + 100^2
-(= (accumulate ???) 338350)
+(= (accumulate ???) 166650)
 ```
 
 ## 💫 Task 7

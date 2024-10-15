@@ -11,7 +11,12 @@ returns this sum: *f(x) + g(f(x)) + f(g(f(x))) +  ...* (containing *n* elements)
 |#
 
 (define (switch-sum f g n)
-  42
+  (λ (x)
+    (if (zero? n)
+        0
+        (+ (f x) ((switch-sum g f (sub1 n)) (f x)))
+        )
+    )
   )
 
 (= ((switch-sum add1 (λ (x) (* x 2)) 1) 2) 3)

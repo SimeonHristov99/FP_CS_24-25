@@ -204,20 +204,20 @@ General
 		a procedure to be executed over those parameters
 	    	(λ (<parameters>) (<procedure>))
 
-	a lambda that adds 5 to a number: ???
-		how would a test look like? ???
+	a lambda that adds 5 to a number: (lambda (x) (+ x 5))
+		how would a test look like? ((lambda (x) (+ x 5)) 10)
 
-	a lambda-predicate that checks whether a number is greater than 10: ???
-		how would a test look like? ???
+	a lambda-predicate that checks whether a number is greater than 10: (lambda (x) (> x 10))
+		how would a test look like? ((lambda (x) (> x 10)) 100)
 
-	a lambda which adds three numbers: ???
-		how would a test look like? ???
+	a lambda which adds three numbers: (lambda (x y z) (+ x y z))
+		how would a test look like? ((lambda (x y z) (+ x y z)) 1 2 3)
 
-	What is an unary procedure? ???
-		examples: ???
+	What is an unary procedure? A procedure that takes one argument.
+		examples: add1, sub1, prime?, divisor-sum
 	
-    What is a binary procedure? ???
-		examples: ???
+    What is a binary procedure? A procedure that takes two arguments.
+		examples: quotient, remainder, expt, divides?
 
 Function Composition
 	Composition of f and g over x: f (g x)
@@ -244,6 +244,6 @@ Applicative and normal order evaluation
     
     In normal order execution, procedure arguments are evaluated after applying the procedure, and then only if the result is needed to complete the evaluation of the procedure.
 
-    What type of evaluation does C++ have? ???
-    What type of evaluation does Racket have? ???
-    What type of evaluation does Haskell have? ???
+    What type of evaluation does C++ have? applicative
+    What type of evaluation does Racket have? applicative
+    What type of evaluation does Haskell have? normal

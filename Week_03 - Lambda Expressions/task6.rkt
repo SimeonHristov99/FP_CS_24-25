@@ -1,10 +1,12 @@
 #lang racket
 
 #|
-Define an iterative `folding` procedure. A `folding` procedure is a procedure that accepts:
+Define an iterative `folding` procedure.
+A `folding` procedure is a procedure that accepts:
 
 - `f`: A binary procedure.
-- `acc`: The accumulated result. This is the `result` variable we use in our linearly iterative procedures.
+- `acc`: The accumulated result.
+   This is the `result` variable we use in our linearly iterative procedures.
 - `start`: The starting value of the range.
 - `end`: The ending value of the range.
 - `transform`: Unary procedure to transform the current value.
@@ -28,20 +30,23 @@ Use it to evaluate the following expressions:
 |#
 
 (define (accumulate f acc start end transform next)
-  42
+  (if (> start end)
+      acc
+      (accumulate f (f (transform start) acc) (next start) end transform next)
+      )
   )
 
 ; 1 + 2 + 3 + ... + 100
-(= (accumulate ???) 5050)
+(= (accumulate + 0 1 100 identity add1) 5050)
 
 ; 1 - (2 - (3 - (4 - 5)))
-(= (accumulate ???) 3)
+(= (accumulate - 0 1 5 identity add1) 3)
 
 ; 1 * 2 * 3 * ... * 10
-(= (accumulate ???) 3628800)
+(= (accumulate * 1 1 10 identity add1) 3628800)
 
 ; 1 * 3 * 5 * ... * 10
-(= (accumulate ???) 2027025)
+(= (accumulate * 1 1 10 identity (λ (x) (+ x 2))) 945)
 
 ; 1^2 + 3^2 + 5^2 + ... + 100^2
-(= (accumulate ???) 338350)
+(= (accumulate + 0 1 100 (λ (x) (expt x 2)) (λ (x) (+ x 2))) 166650)

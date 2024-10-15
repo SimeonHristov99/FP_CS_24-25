@@ -11,7 +11,7 @@ that evaluates the expression `g(f(x), f(y))`.
 |#
 
 (define (higher-composed-eval f g)
-  42
+  (λ (x y) (g (f x) (f y)))
   )
 
 (= ((higher-composed-eval (λ (x) (* x 2)) +) 5 8) 26)
