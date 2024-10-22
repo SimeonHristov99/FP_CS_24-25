@@ -17,4 +17,11 @@ the result should be
 1. All tests pass.
 |#
 
+(define (sort-list xs)
+  (curry sort xs) ; (λ (p?) (sort xs p?))
+  )
 
+(equal?
+ ((sort-list '("one" "two" "0" "five" "" "one hundred" "onehundred"))
+             (λ (s1 s2) (< (string-length s1) (string-length s2))))
+ '("" "0" "one" "two" "five" "onehundred" "one hundred"))

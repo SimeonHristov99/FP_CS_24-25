@@ -1,7 +1,8 @@
 #lang racket
 
 #|
-Define procedures that in linear time transforms a number into a list of its digits and vice versa.
+Define procedures that in linear time
+transforms a number into a list of its digits and vice versa.
 
 **Acceptance criteria:**
 
@@ -10,12 +11,21 @@ Define procedures that in linear time transforms a number into a list of its dig
 |#
 
 (define (num-to-xs n)
-  42
+  (define (helper result leftover)
+    (if (zero? leftover)
+        result
+        (helper (cons (remainder leftover 10) result) (quotient leftover 10))
+     )
+    )
+  (helper null n)
   )
 
-
 (define (xs-to-num xs)
-  42
+  (foldl
+   (λ (digit acc) (+ (* acc 10) digit))
+   0
+   xs
+   )
   )
 
 (equal? (num-to-xs 123) '(1 2 3))

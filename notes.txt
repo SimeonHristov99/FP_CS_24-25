@@ -253,7 +253,7 @@ Applicative and normal order evaluation
 ###################################################################################################
 # Week_04 - Lists
 ###################################################################################################
-	
+
 Strings
 	API: https://docs.racket-lang.org/reference/strings.html#%28def._%28%28quote._~23~25kernel%29._string%29%29
 	string-length, string-append, string<?, string=?, string>?, substring str start [end], string-upcase
@@ -292,29 +292,29 @@ Built-in procedures
 		!!! Must have a check to ensure validity of index !!!
 
 		first element (the locomotive ???)
-		    (first xs) ; first '(1 2 3) => ???
-		    (car xs) ; car '(1 2 3) => ???
+		    (first xs) ; first '(1 2 3) => 1
+		    (car xs) ; car '(1 2 3) => 1
 		  
 		last element
-		    (last xs) ; last '(1 2 3) => ???
+		    (last xs) ; last '(1 2 3) => 3
 
 		second element
-		    (second xs) ; second '(1 2 3) => ???
+		    (second xs) ; second '(1 2 3) => 2
 
 		third, fourth .. tenth
 
 		the ith element
-		    (list-ref xs i) ; list-ref '(1 2 3 4) 2 => ???
+		    (list-ref xs i) ; list-ref '(1 2 3 4) 2 => 3
 
 		get all the wagons of the train
-		    (cdr xs) ; cdr '(1 2 3 4 5 6) => ???
+		    (cdr xs) ; cdr '(1 2 3 4 5 6) => '(2 3 4 5 6)'
 		    pronounced “could-er"
 
 		CCCC: Car and Cdr Complete Chaos
 		    '(1 (2 3 45))
-			get 1        : (??? '(1 (2 3 45)))
-			get '(2 3 45): (??? '(1 (2 3 45)))
-			get 2        : (??? '(1 (2 3 45)))
+			get 1        : (car '(1 (2 3 45)))
+			get '(2 3 45): (cadr '(1 (2 3 45))) ; (second '(1 (2 3 45)))
+			get 2        : (caadr '(1 (2 3 45))) ; (car (second '(1 (2 3 45))))
 
 	(length xs) ; find the length (i.e. the number of elements)
 		length '("we" 2 "can" 5.26 "have multiple types" #f) => 6
@@ -325,10 +325,11 @@ Built-in procedures
 	    returns #f => it is not in xs
 	    returns a list (the element + everything until the end) => it is in xs
 		usually used with (list? )
-	    (member 1 '(16 2 3 4)) -> ???
-	    (member 1 '(14 2 1 4)) -> ???
-		(list? (member 1 '(14 2 1 4))) -> ???
-	    (member 1 '(1 2 3 4)) -> ???
+	    (member 1 '(16 2 3 4)) -> #f
+	    (member 1 '(14 2 1 4)) -> (list 1 4)
+	    (member 1 '(14 1 2 1 4)) -> (list 1 2 1 4)
+		(list? (member 1 '(14 2 1 4))) -> #t
+	    (member 1 '(1 2 3 4)) -> '(1 2 3 4)
 
 	(reverse xs) ; reverse the contents of a list
 		reverse '(1 2 3) => '(3 2 1)
@@ -392,8 +393,8 @@ Built-in procedures
 			first parameter is an element from (right side | left side) of xs
 			second parameter is called the result / the accumulator / the initial value.
 		Examples
-            (foldr (λ (x acc) (and x acc)) #f '(#t #t #t #t #t)) -> ???
-		    (foldl (λ (x acc) (+ x acc)) 0 '(1 2 3 4 5))         -> ???
+            (foldr (λ (x acc) (and x acc)) #f '(#t #t #t #t #t)) -> #f
+		    (foldl (λ (x acc) (+ x acc)) 0 '(1 2 3 4 5))         -> 15
 		Returns the product of all numbers in the list: '(1 2 3 4 5).
 			(foldl (λ (x acc) (* x acc)) 1 '(1 2 3 4 5))
 		Find the sum and product of those numbers using another HOF

@@ -9,19 +9,23 @@ Define a procedure that returns the smallest element of a list.
 |#
 
 (define (get-smallest-rec xs)
-  42
+  (cond
+    [(null? xs) (error "empty list")]
+    [(= 1 (length xs)) (car xs)]
+    [else (min (car xs) (get-smallest-rec (cdr xs)))]
+    )
   )
 
 (define (get-smallest-proc xs)
-  42
+  (apply min xs) ; (car (sort xs <))
   )
 
 (define (get-smallest-fold-proc xs)
-  42
+  (foldr (λ (x acc) (min x acc)) (car xs) (cdr xs))
   )
 
 (define (get-smallest-fold-no-proc xs)
-  42
+  (foldr min (car xs) (cdr xs))
   )
 
 ; using a recursive procedure
