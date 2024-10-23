@@ -416,7 +416,7 @@ Define a predicate that accepts a natural number `n` and returns whether $n^2$ e
 
 **Description:**
 
-A cubic prime number is a prime number that is the difference between two subsequent natural numbers. For example, $61$ is such a number because $61 = 5^3 - 4^3$. Define a procedure that returns the $n^{th}$ cubic prime number.
+A cubic prime number is a prime number that is the difference between the cubes of two subsequent natural numbers. For example, $61$ is such a number because $61 = 5^3 - 4^3$. Define a procedure that returns the $n^{th}$ cubic prime number.
 
 **Acceptance criteria:**
 
