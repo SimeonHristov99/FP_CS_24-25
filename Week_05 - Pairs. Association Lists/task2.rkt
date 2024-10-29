@@ -11,7 +11,11 @@ list *xs* that has corresponding values in the dictionary *dict*.
 |#
 
 (define (replace xs dict)
-  42
+  (map (λ (x)
+         (let
+             ([result (assoc x dict)])
+           (if result (cdr result) x))
+         ) xs)
   )
 
 (equal? (replace '(1 2 3 4) '((1 . 11) (2 . 22))) '(11 22 3 4))

@@ -431,33 +431,34 @@ Pairs and association lists
 		(list '(1 . "One") '(2 . "Two") '(3 . "Three"))
 		(assoc el xs) ; returns the first PAIR (from left to right) that has "el" as key
 					OR #f if there is no such element
-			(assoc 1 '((1 . 2) (2 . 3) (1 . 42))) ; -> ???
+			(assoc 1 '((1 . 2) (2 . 3) (1 . 42))) ; -> '(1 . 2)
 
 
 Higher order functions for lists
 	(ormap p? xs) ; returns true if there is at least one element from xs that satisfies p
-		(ormap even? '(1 2 3 4 5)) ; -> ???
+		(ormap even? '(1 2 3 4 5)) ; -> #t
 
 	(andmap p? xs) ; returns true if all elements from xs satisfy p
 		(andmap even? '(1 2 3 4 5))
 			What predicate would make it return the opposite result?
-				???
+				(andmap (lambda (x) (< x 6)) '(1 2 3 4 5))
+				(andmap (curry > 6) '(1 2 3 4 5))
 
 	(take xs n) ; return the first n elements in xs
-		(take '(1 2 3 4) 0) ; -> ???
-		(take '(1 2 3 4) 2) ; -> ???
-		(take '(1 2 3 4) 5) ; -> ???
+		(take '(1 2 3 4) 0) ; -> null
+		(take '(1 2 3 4) 2) ; -> '(1 2)'
+		(take '(1 2 3 4) 5) ; -> error
 
 	(takef xs pred?) ; return a list whose elements are taken successively from xs as long as they satisfy pred. The returned list includes up to, but not including, the first element in xs for which pred returns #f.
-	(takef '(2 4 5 8) even?) ; -> ???
-	(takef '(2 4 6 8) odd?)  ; -> ???
+	(takef '(2 4 5 8) even?) ; -> '(2 4)'
+	(takef '(2 4 6 8) odd?)  ; -> null
 
 	(drop xs n) ; remove the first n elements in xs
-		(drop '(1 2 3 4) 0) -> ???
-		(drop '(1 2 3 4) 2) -> ???
-		(drop '(1 2 3 4) 5) -> ???
+		(drop '(1 2 3 4) 0) -> '(1 2 3 4)
+		(drop '(1 2 3 4) 2) -> '(3 4)
+		(drop '(1 2 3 4) 5) -> error
 
 	(dropf xs pred?) ; remove elements in xs as long as they satisfy pred
-		(dropf '(2 2 4 8 56) even?) -> ???
+		(dropf '(2 2 4 8 56) even?) -> null
 
 Local Binding: let, let*, letrec: https://docs.racket-lang.org/reference/let.html

@@ -10,16 +10,35 @@ the value of a given key from an associative list.
 2. `assoc-hop` is defined via a `let` expression.
 |#
 
+(let* ([x 5]
+      [y (add1 x)]
+      )
+  y)
+
 (define (assoc-rec key xs)
-  42
+  (cond
+    [(null? xs) (error "empty list")]
+    [(equal? key (caar xs)) (cdar xs)]
+    [else (assoc-rec key (cdr xs))]
+    )
   )
 
 (define (assoc-hop key xs)
-  42
+  (let ([result (dropf xs (λ (pair) (not (equal? key (car pair)))))])
+    (if (null? result)
+        #f
+        (cdar result)
+        )
+    )
   )
 
 (define (assoc-builtin key xs)
-  42
+  (let ([result (assoc key xs)])
+    (if (equal? result #f)
+        #f
+        (cdr result)
+        )
+    )
   )
 
 ; using a recursive process
