@@ -9,7 +9,7 @@
 
 > 🗿 **Legend**: ⭐ - Easy | 🌟 - Medium | 💫 - Hard
 
-# Something different today
+## Something different today
 
 Today we'll solve the tasks in groups. How would this work?
 
@@ -20,7 +20,7 @@ Today we'll solve the tasks in groups. How would this work?
 5. Iterate. Whichever team is done with all tasks is free to leave the class.
 6. Solutions will be uploaded `5` minutes before the end of the session.
 
-# 🌟 Task 1
+## 🌟 Task 1
 
 **Description:**
 
@@ -37,7 +37,7 @@ Define a procedure that accepts a list of nested lists and returns a list contai
 (equal? (my-flatten '(422 22 ((((11))) 33) (131 31 121 12121 11 (12555 555)))) '(422 22 11 33 131 31 121 12121 11 12555 555))
 ```
 
-# 💫 Task 2
+## 💫 Task 2
 
 **Description:**
 
@@ -55,7 +55,7 @@ The depth of an atom *x* in a list *xs* is the number of times *car* must be app
 (equal? (deep-delete '(3 ((1)) 1 ((((3)) 2) 42) 3 (6) 1 0 (3 1 (((9))) 0))) '(3 (()) 1 (((())) 42) 3 (6) 1 (3 (((9))))))
 ```
 
-# ⭐ Task 3
+## ⭐ Task 3
 
 **Description:**
 
@@ -73,7 +73,7 @@ Define a procedure that accepts a list of pairs and an unary function *f* and re
 (equal? (graph-contains-points '((1 . "11") (2 . "21") (3 . "31")) (λ (x) (string-append (number->string x) "1"))) #t)
 ```
 
-# 🌟 Task 4
+## 🌟 Task 4
 
 **Description:**
 
@@ -94,6 +94,6 @@ Define a procedure that takes a matrix *xss*, and returns a modified version of 
 
 Open and solve `exam1_22_23.pdf`.
 
-# 💫 For Home
+## 💫 For Home
 
 Solve the remainder of `exam1_22_23.pdf`.
