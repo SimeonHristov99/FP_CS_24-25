@@ -44,7 +44,7 @@ and remember:
 9. 26.11, Tuesday, 6 pm, 314
 10. 03.12, Tuesday, 6 pm, 314
 11. 10.12, Tuesday, 6 pm, 314
-12. **(Simo to confirm) 16.12, Monday, 11 am, 314**
+12. **16.12, Monday, 11 am, 314**
 13. 17.12, Tuesday, 6 pm, 314
 14. 07.01, Tuesday, 6 pm, 314
 15. 14.01, Tuesday, 6 pm, 314
