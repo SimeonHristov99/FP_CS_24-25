@@ -566,9 +566,9 @@ Types
 		all values MUST be of ONE type
 	[] is the empty list
 	naming conventions
-		helper 5 6          <= helper x y
+		helper 5 6          <== helper x y
 		BUT
-		helper [1, 2, 3] [] <= helper xs ys
+		helper [1, 2, 3] [] <== helper xs ys
 
 
 	################################################################################
@@ -577,8 +577,8 @@ Types
 	- [1, 2, 3, 4, 5, 6]
 
 	- by using cons (":") 
-		- 1 : []  => [1]
-		- 1 : [2] => [1, 2]
+		- 1 : []     => [1]
+		- 1 : [2]    => [1, 2]
 		- 1 : [2, 3] => [1, 2, 3]
 
 
