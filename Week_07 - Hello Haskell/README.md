@@ -189,8 +189,9 @@ Define a function for calculating the `GCD` of two whole numbers.
 1. Add one new test case. Place a comment after it with the words `my test`.
 2. All tests pass.
 3. Normally, you would use the built-in function `gcd`. This is the only time when you should **not** use it.
-4. Guards are used for the implementation.
-5. The right types are used.
+4. `myGcdG` is implemented using guards.
+5. `myGcdPM` is implemented using pattern matching.
+6. The right types are used.
 
 **Acceptance criteria:**
 
