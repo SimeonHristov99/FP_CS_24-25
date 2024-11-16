@@ -21,8 +21,26 @@ and remember:
 
 ## Resources
 
+### Administrative
+
 - [Grading scheme](https://learn.fmi.uni-sofia.bg/pluginfile.php/511360/mod_resource/content/0/%D0%A1%D1%85%D0%B5%D0%BC%D0%B0%20%D0%BD%D0%B0%20%D0%9E%D1%86%D0%B5%D0%BD%D1%8F%D0%B2%D0%B0%D0%BD%D0%B5.pdf)
+
+### Functional programming
+
 - [Pure code, no bugs](https://www.youtube.com/watch?v=HlgG395PQWw)
+
+### Haskell
+
+- [HASKELL IN 100 SECONDS](https://youtu.be/Qa8IfEeBJqk)
+- [Youtube channel (beginner to advanced)](https://www.youtube.com/channel/UC3xdLFFsqG701QAyGJIPT1g/videos)
+- [Book](http://learnyouahaskell.com/chapters) (read chapters [1 .. 8])
+- [Library for working with lists (Data.List)](https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html)
+- [Library for working with characters/digits (Data.Char)](https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Char.html)
+- [Youtube channel (advanced)](https://www.youtube.com/c/Tsoding/videos)
+- [Learn Haskell in 1 hour](https://www.youtube.com/watch?v=02_H3LjqMr8)
+
+### Racket
+
 - [Introduction to Racket and Dr. Racket](https://www.youtube.com/playlist?list=PLXaqTeMx01E_eK1ZEpKvKL5KwSaj7cJW9)
 - [Racket API](https://docs.racket-lang.org/reference/)
 - [CHEAT SHEET](https://docs.racket-lang.org/racket-cheat/index.html)
@@ -39,7 +57,7 @@ and remember:
 4. :white_check_mark: 22.10, Tuesday, 6 pm, 314
 5. :white_check_mark: 29.10, Tuesday, 6 pm, 314
 6. :white_check_mark: 05.11, Tuesday, 6 pm, 314
-7. 12.11, Tuesday, 6 pm, 314
+7. :white_check_mark: 12.11, Tuesday, 6 pm, 314
 8. 19.11, Tuesday, 6 pm, 314
 9. 26.11, Tuesday, 6 pm, 314
 10. 03.12, Tuesday, 6 pm, 314
