@@ -692,3 +692,97 @@ Types
 		all    (\ x -> even x)         [2, 4, 6]    => True
 		any    (\ x -> odd x)          [2, 4, 6]    => False
 		any    (\ x -> mod x 10 == 0)  [20, 44, 61] => True
+
+
+
+########################################################################################################################
+# Week_08 - Lists and Tuples
+########################################################################################################################
+
+
+	Tuples (Vectors) (Ordered pairs)
+
+		- data structures whose size has to be explicitly stated (analogy with array in C++)
+		- can hold multiple types (ex. x :: (Int, String, [Double]) is a vector with 3 dimensions)
+		- fst (5, 6) => 5
+		- snd (5, 6) => 6
+
+		Examples:
+		a vector with two coordinates representing a point in 2D space:
+		type Point2D = (Int, Int)
+		-- typedef std::pair<int, int> Point2D;
+
+		Now every function that accepts a Point2D will look like this:
+
+		helper :: Point2D -> Int -- instead of (Int, Int) -> Int
+		helper (x, y) = x + y -- this function sums up the coordinates. Notice the pattern matching!
+		-- helper x = fst x + snd x
+
+		Notice:
+		type String = [Char]
+
+
+	Typeclasses
+
+		This is the analog of using "template <class T>" in C++.
+
+		Example:
+			Let's say that a function should accept numbers in general, not only Int or Double.
+
+			old:
+			helper :: Int -> Int
+
+			new:
+			helper :: (Num a, Num b) => a -> b
+
+		Some useful Typeclasses
+			if only numbers then Num
+			if ==, /= then Eq
+			if <, <=, >=, > then Ord
+			if only Float and Double then Fractional
+			if only Int and Integer then Integral
+			if making an algebraic type that has to be printed then Show
+
+		In most cases the compiler will help us (Compiler Driven Development). We'll demonstrate how this works today!
+
+		Detailed example and workflow:
+			A function that adds 1 to every number in a list:
+				If we were working with whole numbers it would be:
+					addOne :: [Int] -> [Int]
+					addOne xs = map (\ x -> x + 1) xs
+				When working with typeclasses we're abstracting away the whole numbers concept - we're now working with anything that is a number.
+				You might start with:
+					addOne :: [a] -> [a]
+					addOne xs = map (\ x -> x + 1) xs
+				But this will throw an error because "a" is not bound/restricted - as written above it can be any type, including "Char", "String", even "[String]" and functions.
+				And we know that "+" is not defined for types different from "Num". This is why if we run the above code we'll get an error:
+					• No instance for (Num a) arising from a use of ‘+’
+					Possible fix:
+						add (Num a) to the context of
+						the type signature for:
+							addOne :: forall a. [a] -> [a]
+					• In the expression: x + 1
+					In the first argument of ‘map’, namely ‘(\ x -> x + 1)’
+					In the expression: map (\ x -> x + 1) xs
+				However! Look at what the compiler is saying:
+					add (Num a) to the context of [...] addOne
+				This is the key to compiler driven development! The compiler helps us define the proper types by suggesting the restriction that we need to place.
+				We do that and now the following function works:
+					addOne :: (Num a) => [a] -> [a]
+					addOne xs = map (\ x -> x + 1) xs
+
+			The approach I suggest is therefore the following:
+				1. Write our the declaration skipping the typeclasses (addOne :: [a] -> [a]).
+				2. Try to run the script. It will fail with errors that help you (add (Num a) to the context of [...] addOne).
+				3. Fix the declarations from the first to the last (i.e. by going from top to bottom in the error messages) by adding the typeclasses.
+				4. If you cannot fix the declarations and the task does not require them, remove all declarations. The code will still work because Haskell has built-in type inference.
+
+		A note about the "read" function:
+			We know that we can use read to transform a string into a number.
+			Let's say we define the following function without a declaration:
+				f ss = read ss
+			And call it like: f "16" and f "15.42".
+			What is the problem here?
+				We can't define "f" without a declaration because Haskell has to know what type we want to return from every call.
+					The first call suggests "Int", but the second one suggests "Double".
+			So, remember: when using "read" always specify return type explicitly.
