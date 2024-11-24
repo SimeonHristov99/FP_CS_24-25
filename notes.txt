@@ -786,3 +786,68 @@ Types
 				We can't define "f" without a declaration because Haskell has to know what type we want to return from every call.
 					The first call suggests "Int", but the second one suggests "Double".
 			So, remember: when using "read" always specify return type explicitly.
+
+
+
+########################################################################################################################
+# Week_09 - Pattern matching. Typeclasses
+########################################################################################################################
+
+	###################################################################################################
+	# Folding (Map Reduce)
+	###################################################################################################
+
+	foldl <- Start from left using an accumulator as an initial value. Return accumulator if empty list.
+	foldl1 <- Start from left using the left-most element as an initial value. If empty list, then error!
+
+	foldr <- Start from right using an accumulator as an initial value. Return accumulator if empty list.
+	foldr1 <- Start from right using the right-most element as an initial value. If empty list, then error!
+
+	-- if the list is empty, the result is the initial value z; else
+	-- apply f to the first element and the result of folding the rest
+	foldr f z []     = z 
+	foldr f z (x:xs) = f x (foldr f z xs) 
+
+	foldr1 _ [x] = x
+	foldr1 f (x:xs) = f x (foldr1 f xs)
+
+	-- if the list is empty, the result is the initial value; else
+	-- we recurse immediately, making the new initial value the result
+	-- of combining the old initial value with the first element
+	foldl f z []     = z                  
+	foldl f z (x:xs) = foldl f (f z x) xs
+
+	foldl1 _ [x]       = x
+	foldl1 f (x:y:zs)  = f (f x y) (foldl1 f zs)
+	-- alternative: foldl1 f (x:y:zs) = foldl1 f ((f x y):zs)
+
+	foldl (\ acc x -> acc - x) 0 [1, 2, 3]
+	???
+
+	foldl1 (\ x y -> x - y) [1, 2, 3]
+	???
+
+	foldr (\ x acc -> x + acc) 0 [1, 2, 3]
+	???
+
+	foldr1 (\ x y -> x + y) [1, 2, 3]
+	???
+
+	###################################################################################################
+	# Let Syntax
+	###################################################################################################
+
+	Description:
+		A nested, lexically-scoped, mutually-recursive list of declarations (let is often called `letrec` in other languages). The scope of the declarations is the expression and the right hand side of the declarations.
+
+	Examples:
+
+	aaa = let y = 1+2
+			  z = 4+6
+			  in  y+z
+
+    aaa x y = let r = 3 
+                  s = 6
+                  in  r*x + s*y
+
+	aaa vector = let (x, y) = vector in x + y
