@@ -9,6 +9,17 @@
 
 > 🗿 **Legend**: ⭐ - Easy | 🌟 - Medium | 💫 - Hard
 
+## Solving in teams today
+
+As we did last time:
+
+1. Split in teams of at least `2` people.
+2. Start solving the tasks on `1` computer.
+3. When you are done with one task, call me for feedback. One of you will have to explain the solution.
+4. Only then move on to the next task.
+5. Iterate. Whichever team is done with all tasks is free to leave the class.
+6. Solutions will be uploaded `5` minutes before the end of the session.
+
 ## 🌟 Task 1
 
 **Description:**
