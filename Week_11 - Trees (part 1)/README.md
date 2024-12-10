@@ -80,7 +80,21 @@ print $ mapTree charBTree (toUpper) == Node 'K' (Node 'A' (Node 'H' Nil Nil) (No
 
 **Description:**
 
-Define a recursive polymorphic algebraic type representing an *n*-ary tree. Create one instance and print it.
+Define a recursive polymorphic algebraic type representing an *n*-ary tree. Create the following two instances and print them.
+
+```text
+t1:
+   1
+/ / \ \
+3 5  7 9
+
+t2:
+  7
+  |
+  9
+ / \
+5   2
+```
 
 **Acceptance criteria:**
 
