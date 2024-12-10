@@ -61,7 +61,7 @@ and remember:
 8. :white_check_mark: 19.11, Tuesday, 6 pm, 314
 9. :white_check_mark: 26.11, Tuesday, 6 pm, 314
 10. :white_check_mark: 03.12, Tuesday, 6 pm, 314
-11. 10.12, Tuesday, 6 pm, 314
+11. :white_check_mark: 10.12, Tuesday, 6 pm, 314
 12. **16.12, Monday, 11 am, 314**
 13. 17.12, Tuesday, 6 pm, 314
 14. 07.01, Tuesday, 6 pm, 314
