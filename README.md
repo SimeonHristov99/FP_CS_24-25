@@ -114,7 +114,7 @@ It's not as dumb as you may think and has great power to transform how you think
 
 ### 7. How to submit `For Home`?
 
-Only over email, using the already establish email thread.
+Only over email, using the already established email thread.
 
 ### 8. You are too mean and cause me psychological stress. How do I convey this to you?
 
