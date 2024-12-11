@@ -97,7 +97,7 @@ Your work will be considered forged.
 
 `For Home` is a system having the only goal of making sure you understand what we discuss and do in class, thus helping you to become a better programmer.
 
-It's essence:
+Its essence:
 
 - specially curated tasks that are present after each practice session;
 - you solve them whenever you want to and have free time;
