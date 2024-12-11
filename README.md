@@ -106,7 +106,7 @@ Its essence:
 - (iteration) you implement the feedback and submit again. I check and provide either `Yes` or feedback on what I would like us to work on;
 - you reap the benefits the system provides: a maximum of `50%` point increase for each homework, exam and final **that I grade**.
 
-The most important characteristic of `For Home` is **iterative feedback**. It's goal is **not** to be a one-time-submission. It's goal is to make you a better programmer via **iterative feedback**.
+The most important characteristic of `For Home` is **iterative feedback**. Its goal is **not** to be a one-time-submission. It's goal is to make you a better programmer via **iterative feedback**.
 
 It's not as dumb as you may think and has great power to transform how you think, how fast you problem-solve and how you perform on other programming subjects.
 
