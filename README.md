@@ -168,6 +168,6 @@ No. However, note that I have a very strict standard (code is easy to read, safe
 7. If you can't solve a task, skip it - continue with the rest.
 8. After you've solved as much as you could, submit an email, highlighting what you tried and what your idea was.
 
-### 14. Can I use external help - for example, repos/solutions from other current/previous students?
+### 14. Can I use external help - for example, repos/solutions from other current/previous year students?
 
-No. Just ask me when you need help. I'll help you more than everything you can access via Internet * `100`. Don't believe it - try me ^_^ (also, asking previous students may help)!
+No. Just ask me when you need help. I'll help you more than everything you can access via Internet * `100`. Don't believe it - try me ^_^ (also, asking previous year students may help)!
