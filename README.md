@@ -101,7 +101,7 @@ Its essence:
 
 - specially curated tasks that are present after each practice session;
 - you solve them whenever you want to and have free time;
-- you submit them before the next session over email (if can't, drop me a line beforehand and all will be ok);
+- you submit them before the next session over email (if you can't, drop me a line beforehand and all will be ok);
 - I check your solutions and give either a `Yes` or feedback on what I would like us to work on;
 - (iteration) you implement the feedback and submit again. I check and provide either `Yes` or feedback on what I would like us to work on;
 - you reap the benefits the system provides: a maximum of `50%` point increase for each homework, exam and final **that I grade**.
